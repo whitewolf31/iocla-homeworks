@@ -37,50 +37,33 @@ char **readCommand(int *argc) {
     return command;
 }
 
-void processCommand(char **command, Dir *currentDir) {
+void processCommand(char **command, Dir **currentDir) {
     if (!strcmp(*command, TOUCH_COMMAND)) {
-        touch(currentDir, *(command + 1));
+        touch(*currentDir, *(command + 1));
     } else if (!strcmp(*command, MKDIR_COMMAND)) {
-        mkdir(currentDir, *(command + 1));
+        mkdir(*currentDir, *(command + 1));
     } else if (!strcmp(*command, LS_COMMAND)) {
-        ls(currentDir);
+        ls(*currentDir);
+    } else if (!strcmp(*command, RM_COMMAND)) {
+        rm(*currentDir, *(command + 1));
+    } else if (!strcmp(*command, RMDIR_COMMAND)) {
+        rmdir(*currentDir, *(command + 1));
+    } else if (!strcmp(*command, CD_COMMAND)) {
+        cd(currentDir, *(command + 1));
+    } else if (!strcmp(*command, TREE_COMMAND)) {
+        tree(*currentDir, 0);
+    } else if (!strcmp(*command, PWD_COMMAND)) {
+        char *path = pwd(*currentDir);
+        printf("%s\n", path);
+        free(path);
+    } else if (!strcmp(*command, MV_COMMAND)) {
+        mv(*currentDir, *(command + 1), *(command + 2));
     }
-}
-
-void freeCommand(char **command, int argc) {
-    for (int i = 0; i < argc; i++) {
-        free(*(command + i));
-    }
-
-    free(command);
-}
-
-void freeDir(Dir *currentDir) {
-    // Free dirs and subdirs
-    Dir *looperDir = currentDir->head_children_dirs;
-    while (looperDir) {
-        Dir *nextDir = looperDir->next;
-        freeDir(looperDir);
-        looperDir = nextDir;
-    }
-
-    // Free files
-    File *looperFile = currentDir->head_children_files;
-    while (looperFile) {
-        File *nextFile = looperFile->next;
-        free(looperFile->name); // Free name
-        free(looperFile);
-        looperFile = nextFile;
-    }
-
-    // Free name and itself
-    free(currentDir->name);
-    free(currentDir);
-
 }
 
 Dir *initRootDir() {
     Dir *rootDir = (Dir *) malloc(sizeof(Dir));
+    rootDir->name = NULL;
     rootDir->parent = NULL;
     rootDir->head_children_files = NULL;
     rootDir->head_children_dirs = NULL;
@@ -99,13 +82,13 @@ int main () {
         if (currentCommand != NULL) freeCommand(currentCommand, currentArgc); // Free previous command
 
         currentCommand = readCommand(&currentArgc);
-        processCommand(currentCommand, currentDir);
+        processCommand(currentCommand, &currentDir);
 
 	} while (strcmp(*currentCommand, STOP_COMMAND));
 
     // Free everything
     freeCommand(currentCommand, currentArgc);
-    freeDir(currentDir);
+    freeDir(rootDir);
 	
 	return 0;
 }
