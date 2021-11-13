@@ -3,6 +3,17 @@
 #include <string.h>
 #include "tema1.h"
 
+Dir *initRootDir() {
+    Dir *rootDir = (Dir *) malloc(sizeof(Dir));
+    rootDir->name = NULL;
+    rootDir->parent = NULL;
+    rootDir->head_children_files = NULL;
+    rootDir->head_children_dirs = NULL;
+    rootDir->next = NULL;
+
+    return rootDir;
+}
+
 Dir *initDir(char *name, Dir* parent, File *head_children_files, Dir *head_children_dirs, Dir *next) {
     Dir *newDir = (Dir *) malloc(sizeof(Dir));
     newDir->name = (char *) malloc((strlen(name) + 1) * sizeof(char));

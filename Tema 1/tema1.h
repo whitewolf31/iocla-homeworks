@@ -59,6 +59,8 @@ void mv(Dir* parent, char *oldname, char *newname);
 
 Dir *initDir(char *name, Dir* parent, File *head_children_files, Dir *head_children_dirs, Dir *next);
 
+Dir *initRootDir();
+
 File *initFile(char *name, Dir *parent, File *next);
 
 void freeDir(Dir *currentDir);

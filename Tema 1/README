@@ -1,0 +1,94 @@
+TEMA 1 -> Sistemul lui Biju
+
+Aceasta tema are ca scop simularea catorva comenzi din Bash pentru navigarea si crearea de fisiere/directoare.
+
+Comenzile care au fost implementate:
+touch
+mkdir
+ls
+rm
+rmdir
+cd
+tree
+pwd
+mv
+
+In continuare voi prezenta pentru fiecare functie o scurta descriere
+
+tema1.c/ int main(void)
+    Functie folosita pentru initializare programului si pentru a crea un ciclu while care verifica daca programul
+    trebuie continuat sa oprit
+
+tema1.c/ int countSpaces(char *command)
+    Functie folosita pentru numararea numerelor de spatii dintr-o comanda. Este utila aceasta functie pentru a
+    determina cu exactitate cata memorie trebuie alocata pentru comanda
+
+tema1.c/ char **readCommand(int *argc)
+    Functie folosita pentru a citi o linie din stdin si a o procesa intr-un vector de char*, fiecare element din
+    vector reprezentand un cuvant din comanda. Functia intoarce vectorul de cuvinte din comanda. Aceasta functie
+    primeste ca si parametru un int* folosit pentru a putea intoarce de asemenea numarul de cuvinte din comanda
+
+tema1.c/ void processCommand(char **command, Dir **currentDir)
+    Functie folosita pentru a decide ce functie trebuie apelata pentru a rula comanda. Primeste ca argumente vectorul
+    de cuvinte din comanda si un pointer catre directorul curent, in caz ca acesta trebuie schimbat
+
+tema1.c/ void stop(Dir *target)
+    Functie care apeleaza o alta functie de eliberat memoria. Primeste ca parametru directorul root (home)
+
+create-functions.c/ void touch(Dir *parent, char *name)
+    Functie care creaza un nou fisier in directorul *parent cu numele *name, daca un fisier cu acest nume nu exista
+    deja. In caz contrar, programul va afisa o eroare
+
+create-functions.c/ void mkdir(Dir *parent, char *name)
+    Functie care creaza un nou director in directorul *parent cu numele *name, daca un director cu acest nume nu exista
+    deja. In caz contrar, programul va afisa o eroare
+
+delete-functions.c/ void rm(Dir *parent, char *nume)
+    Functie care sterge fisierul cu numele *name din directorul *parent, daca acesta exista. In caz contrar, programul
+    afiseaza un mesaj de eroare.
+
+delete-functions.c/ void rmdir(Dir *parent, char *nume)
+    Functie care sterge directorul cu numele *name din directorul *parent, alaturi de toate subdirectoarele sale si
+    subfisierele sale. Daca directorul nu exista, programul afiseaza un mesaj de eroare.
+
+free-functions.c/ void freeCommand(char **command, int argc)
+    Functie care elibereaza memoria dintr-un vector de (argc) cuvinte, care reprezinta o comanda create de functia
+    tema1.c/readCommand.
+
+free-functions.c/ void freeDir(Dir *currentDir)
+    Functie care elibereaza recursiv memoria dintr-un director, alaturi de toate subdirectoarele si toate subfisierele
+    sale.
+
+init-functions.c/ Dir *initRootDir()
+    Functie care initializeaza directorul root (home) si il returneaza.
+
+init-functions.c/ Dir *initDir(char *name, Dir* parent, File *head_children_files, Dir *head_children_dirs, Dir *next)
+    Functie care initializeaza un director adaugand la membrii sai valorile primite ca si parametrii.
+
+init-functions.c/ File *initFile(char *name, Dir *parent, File *next)
+    Functie care initializeaza un fisier adaugand la membrii sai valorile primite ca si parametrii.
+
+navigation-functions.c/ void cd(Dir **target, char *name)
+    Functie care schimba directorul curent in subdirectorul cu numele *name. Daca numele furnizat este '..', atunci
+    directorul curent va fi schimbat in parintele directorului curent. Daca nu exista un subdirector cu numele *name,
+    atunci se va afisa un mesaj de eroare.
+
+navigation-functions.c/ void mv(Dir *parent, char *oldname, char *newname)
+    Functie care va schimba numele unui director/fisier din *oldname in *newname, totodata mutandu-l la coada listei de
+    directoare/fisiere. Daca exista deja un director/fisier cu numele *newname se va afisa un mesaj de eroare. Daca
+    fisierul/directorul cu numele *oldname nu exista, se va afisa un mesaj de eroare.
+
+output-functions.c/ void ls(Dir *parent)
+    Functie care printeaza numele tuturor subdirectoarelor si fisierul din directorul curent, intai printand numele
+    subdirectoarelor, apoi numele fisierelor
+
+output-functions.c/ void printSpaces(int level)
+    Functie care printeaza numarul de spatii necesare de la nivelul level. Este nevoie de aceasta functie in functia
+    output-functions.c/ tree pentru a simula un tab in functie de nivelul la care suntem.
+
+output-functions.c/ void tree(Dir *target, int level)
+    Functie care printeaza numele tuturor subdirectoarelor, fisierelor si subfisierelor din ierarhia directorului *target.
+    Aceasta functie este apelata recursiv de fiecare data tinundu-se cont de nivelul la care suntem.
+
+output-functions.c/ char *pwd(Dir *target)
+    Functie care intoarce calea directorului *target.

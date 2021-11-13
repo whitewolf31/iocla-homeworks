@@ -61,18 +61,11 @@ void processCommand(char **command, Dir **currentDir) {
     }
 }
 
-Dir *initRootDir() {
-    Dir *rootDir = (Dir *) malloc(sizeof(Dir));
-    rootDir->name = NULL;
-    rootDir->parent = NULL;
-    rootDir->head_children_files = NULL;
-    rootDir->head_children_dirs = NULL;
-    rootDir->next = NULL;
-
-    return rootDir;
+void stop(Dir *target) {
+    freeDir(target);
 }
 
-int main () {
+int main (void) {
     char **currentCommand = NULL;
     Dir *rootDir = initRootDir();
     Dir *currentDir = rootDir;
@@ -88,7 +81,7 @@ int main () {
 
     // Free everything
     freeCommand(currentCommand, currentArgc);
-    freeDir(rootDir);
+    stop(rootDir);
 	
 	return 0;
 }
