@@ -16,13 +16,13 @@ rotp:
 
     ;; TODO: Implment rotp
     ;; FREESTYLE STARTS HERE
-    mov eax, 0
+    mov	    eax, 0
 cipher_loop:
-    mov bl, BYTE [esi + eax]
-    xor bl, [edi + ecx - 1]
-    mov [edx + eax], bl
-    inc eax
-    loop cipher_loop
+    mov     bl, BYTE [esi + eax]
+    xor     bl, [edi + ecx - 1] ; performing XOR
+    mov     [edx + eax], bl ; moving to result
+    inc     eax 
+    loop    cipher_loop ; continuing loop
 
     ;; FREESTYLE ENDS HERE
     ;; DO NOT MODIFY

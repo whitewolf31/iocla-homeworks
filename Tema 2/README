@@ -1,0 +1,30 @@
+Aceasta este descrierea implementarii temei 2 la IOCLA - Memoria lui Biju
+
+1) ROTP - Reverse one-time padding
+
+Aceasta problema a fost implementata inversand cheia si facand xor byte cu byte
+Partea mai grea in assembly este ca avem nevoie de un registru care sa descreasca
+si unul care sa creasca
+
+2) Ages
+
+Aceasta problema a fost implementata intai calculand diferenta dintre ani, apoi
+calculand diferenta dintre luni. Daca luna era mai mare, trebuie sa scadem 1 pt
+ca persoana nu a implinit inca varsta anul acesta. Daca varsta era egala, verificam
+in mod similar ziua. De asemenea, daca cumva varsta era invalida, adica era in 
+viitor, atunci intoarcem 0
+
+3) Columnar Transposition Cipher
+
+Aceasta problema a fost implementata folosindu-ma de ordinea cheii. Cream un
+offset dupa o regula simpla dintr-o matrice, verificand de asemenea ca nu cumva
+ca casuta din matrice la care sunt sa nu depaseasca lungimea plaintext-ului.
+
+
+4) Cache Load Simulation
+
+Aceasta problema a fost implementata intai folosindu-ma de sirul tag-urilor.
+Citeam sa vad daca exista tag-ul pe care il cautam. Daca existam ma uitam
+in sirul cache-ului pentru a recupera informatia, iar daca nu o gaseam introduceam
+adresa in sirul de tag-uri si in linia acea de cache mutam informatiile din memorie
+pe cache, pentru a putea avea o simulare corecta 
