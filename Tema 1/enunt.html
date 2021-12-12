@@ -1,0 +1,811 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" dir="ltr" lang="en"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>
+    Tema 1  - Sistemul lui Biju    [CS Open CourseWare]
+  </title>
+
+  <meta name="generator" content="DokuWiki">
+<meta name="robots" content="index,follow">
+<meta name="date" content="2021-11-02T18:25:19+0200">
+<meta name="keywords" content="iocla,teme,tema-1">
+<link rel="search" type="application/opensearchdescription+xml" href="https://ocw.cs.pub.ro/courses/lib/exe/opensearch.php" title="CS Open CourseWare">
+<link rel="start" href="https://ocw.cs.pub.ro/courses/">
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="https://ocw.cs.pub.ro/courses/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Current Namespace" href="https://ocw.cs.pub.ro/courses/feed.php?mode=list&amp;ns=iocla:teme">
+<link rel="alternate" type="text/html" title="Plain HTML" href="https://ocw.cs.pub.ro/courses/_export/xhtml/iocla/teme/tema-1">
+<link rel="canonical" href="http://ocw.cs.pub.ro/courses/iocla/teme/tema-1">
+<link rel="stylesheet" type="text/css" href="enunt_files/css.css">
+<script type="text/javascript">/*<![CDATA[*/var NS='iocla:teme';var JSINFO = {"id":"iocla:teme:tema-1","namespace":"iocla:teme","isadmin":0,"isauth":0};
+/*!]]>*/</script>
+<script type="text/javascript" charset="utf-8" src="enunt_files/js.js"></script>
+<script type="text/x-mathjax-config;executed=true">/*<![CDATA[*/MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+        displayMath: [ ["$$","$$"], ["\\[","\\]"] ],
+        processEscapes: true
+    }
+});
+/*!]]>*/</script>
+<script src="enunt_files/MathJax.js" id=""></script>
+<script type="text/javascript">/*<![CDATA[*/
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		  
+/*!]]>*/</script><script src="enunt_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">/*<![CDATA[*/
+var pageTracker = _gat._getTracker("UA-38383934-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+		  
+/*!]]>*/</script>
+
+  <link rel="shortcut icon" href="https://ocw.cs.pub.ro/courses/lib/tpl/arctic/images/favicon.ico">
+
+  
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+<body><div id="MathJax_Message" style="display: none;"></div>
+<div id="wrapper" class="show">
+  <div class="dokuwiki">
+
+    
+    <div class="stylehead">
+      <div class="header">
+        <div class="pagename">
+          <a href="https://ocw.cs.pub.ro/courses/iocla/"><img src="enunt_files/sigla_iocla.png" height="70"> </a>        </div>
+        <div class="logo">
+          <a style="color: #AAA !important;" href="https://ocw.cs.pub.ro/courses/">Open CourseWare</a>        </div>
+      </div>
+    
+       
+      <div class="breadcrumbs">
+              </div>
+      
+            </div>
+
+                  <div class="bar" id="bar__top">
+        <div class="bar-left">
+                  </div>
+        <div class="bar-right">
+          <a href="https://ocw.cs.pub.ro/courses/iocla/teme/tema-1?do=recent" class="action recent" accesskey="r" rel="nofollow" title="Recent changes [R]">Recent changes</a><a href="https://ocw.cs.pub.ro/courses/iocla/teme/tema-1?do=login&amp;sectok=3bc2149cd9ab32b0ed0bf3b4c9678e4d" class="action login" rel="nofollow" title="Login">Login</a>        </div>
+    </div>
+        
+    
+    
+    
+              <div class="left_page">
+          
+<h1 class="sectionedit1" id="tema_1_-_sistemul_lui_biju">Tema 1  - Sistemul lui Biju</h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> Deadline: 21.11.2021</div>
+</li>
+<li class="level1"><div class="li"> Data publicării: 01.11.2021</div>
+</li>
+<li class="level1"><div class="li"> Ultima actualizare a enuntului:</div>
+<ul>
+<li class="level2"><div class="li"> 02.11.2021: <a href="https://ocw.cs.pub.ro/courses/iocla/teme/tema-1#precizari_suplimentare" class="urlextern" title="https://ocw.cs.pub.ro/courses/iocla/teme/tema-1#precizari_suplimentare" rel="nofollow">Update coding style</a></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Responsabili:</div>
+<ul>
+<li class="level3"><div class="li"> <a href="mailto:tudorhodoboc@yahoo.com" class="mail" title="tudorhodoboc@yahoo.com">   Tudor Hodoboc-Velescu      </a></div>
+</li>
+<li class="level3"><div class="li"> <a href="mailto:catalingabrielpopa847@gmail.com" class="mail" title="catalingabrielpopa847@gmail.com">   Catalin-Gabriel Popa       </a></div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+<h2 class="sectionedit2" id="enunt">Enunt</h2>
+<div class="level2">
+
+<p>
+Biju si-a stricat linuxul dand comanda <code>sudo deluser username sudo</code> recomandata de prieteni.
+Asa ca si-a facut ca scop sa le strice tuturor sistemul de operare, dar ca sa faca asta trebuie
+sa inteleaga ce este un sistem de operare. Deoarece un sistem de operare este exagerat de complex,
+si se face in anul 3 *wenk* *wenk*, doreste sa faca un sistem mult mai simplu. Ajutati-l pe Biju
+sa se razbune facandu-i urmatoarea simulare.
+</p>
+
+<p>
+Deoarece chiar si un model simplu de sistem de operare este foarte complex, dorim sa simulam doar
+sistemul de fisiere. Orice sistem de operare lucreaza cu fisiere si directoare, asa ca ne propunem
+sa simulam operatii simple pe aceste doua structuri, ca de exemplu: touch, mkdir, rm, rmdir…
+</p>
+
+</div>
+
+<h2 class="sectionedit3" id="implementare">Implementare</h2>
+<div class="level2">
+
+<p>
+Ne propunem să implementăm acest sistem de fişiere folosind liste simple înlănţuite. In cadrul
+acestei teme, structurile de fişier, respectiv de director vor avea o reprezentare mai simplă,
+care conţine numai metadatele strict necesare pentru a implementa operaţiile de shell dorite,
+ce vor fi enunţate în continuare.
+</p>
+
+<p>
+Urmatoarele doua reprezinta implementarea structurilor de date:
+</p>
+<pre class="code c"><span class="kw4">typedef</span> <span class="kw4">struct</span> Dir<span class="br0">{</span>
+	<span class="kw4">char</span> <span class="sy0">*</span>name<span class="sy0">;</span>   <span class="co1">// numele directorului</span>
+	<span class="kw4">struct</span> Dir<span class="sy0">*</span> parent<span class="sy0">;</span>  <span class="co1">// pointer catre parintele directorului(null pentru radacina)</span>
+	<span class="kw4">struct</span> File<span class="sy0">*</span> head_children_files<span class="sy0">;</span>  <span class="co1">// pointer catre primul element de tip File din interiorul directorului</span>
+	<span class="kw4">struct</span> Dir<span class="sy0">*</span> head_children_dirs<span class="sy0">;</span> <span class="co1">// pointer catre primul element de tip Dir din interiorul directorului</span>
+	<span class="kw4">struct</span> Dir<span class="sy0">*</span> next<span class="sy0">;</span> <span class="co1">// pointer catre urmatorul element din lista in care se afla directorul</span>
+<span class="br0">}</span>Dir<span class="sy0">;</span> <span class="co1">// structura de tip director</span>
+&nbsp;
+<span class="kw4">typedef</span> <span class="kw4">struct</span> File <span class="br0">{</span>
+	<span class="kw4">char</span> <span class="sy0">*</span>name<span class="sy0">;</span>  <span class="co1">// numele fisierului</span>
+	<span class="kw4">struct</span> Dir<span class="sy0">*</span> parent<span class="sy0">;</span> <span class="co1">// pointer catre directorul pe</span>
+	<span class="kw4">struct</span> File<span class="sy0">*</span> next<span class="sy0">;</span> <span class="co1">// pointer catre urmatorul element din lista de fisiere</span>
+<span class="br0">}</span>File<span class="sy0">;</span> <span class="co1">// structura de tip fisier</span></pre>
+
+<p>
+Ne dorim ca cel mai de baza nivel al sistemului de fisiere sa fie un director numit home in interiorul
+caruia o sa ne desfasuram toate task-urile.
+</p>
+
+<p>
+In momentul rularii aplicatiei, aceasta va astepta inputuri de la stdin. Fiecare comanda va fi apelata sub forma
+&lt;nume_comanda&gt; + argumente, argumentele variind in functie de comanda data. Exemple de comenzi: <code>touch f1</code>,
+<code>mkdir d1</code>, <code>rm f2</code>, <code>rmdir d2</code>, <code>ls</code>, <code>mv nume_vechi nume_nou</code> etc. Aplicatia se va opri
+la comanda <code>stop</code>. Comenzile vor fi explicate in cele ce urmeaza.
+</p>
+
+<p>
+</p><p></p><div class="noteclassic"> Recomandam citirea punctului <em>10. memory management</em> inainte de a va apuca de scris cod. 
+</div><p></p>
+<p></p>
+
+</div>
+
+<h3 class="sectionedit4" id="touch">1. touch</h3>
+<div class="level3">
+<pre class="code c"><span class="kw4">void</span> touch <span class="br0">(</span>Dir<span class="sy0">*</span> parent<span class="sy0">,</span> <span class="kw4">char</span><span class="sy0">*</span> name<span class="br0">)</span><span class="sy0">;</span></pre>
+
+<p>
+Functia creaza un fisier in directorul curent. Acesta va fi adaugat la finalul listei de fisiere. Aceasta
+primeste ca argument numele fisierului. Numele fisierului nu contine ”/”(nu va reprezenta o cale). In cazul
+in care exista deja un fisier/director cu acest nume, se va afisa urmatorul mesaj de eroare: <code>File already exists\n</code>.
+</p>
+
+</div>
+
+<h3 class="sectionedit5" id="mkdir">2. mkdir</h3>
+<div class="level3">
+<pre class="code c"><span class="kw4">void</span> mkdir <span class="br0">(</span>Dir<span class="sy0">*</span> parent<span class="sy0">,</span> <span class="kw4">char</span><span class="sy0">*</span> name<span class="br0">)</span><span class="sy0">;</span></pre>
+
+<p>
+Functia creaza un director in directorul curent. Acesta va fi adaugat la
+ finalul listei de fisiere. Aceasta
+primeste ca argument numele directorului. Numele directorului nu contine
+ ”/”(nu va reprezenta o cale). In cazul in care exista deja un 
+fisier/director cu acest nume, se va afisa urmatorul mesaj de eroare: <code>Directory already exists\n</code>.
+</p>
+
+</div>
+
+<h3 class="sectionedit6" id="ls_-_30p">3. ls - 30p</h3>
+<div class="level3">
+<pre class="code c"><span class="kw4">void</span> ls <span class="br0">(</span>Dir<span class="sy0">*</span> parent<span class="br0">)</span><span class="sy0">;</span></pre>
+
+<p>
+Functia afiseaza toate directoarele, respectiv fisierele din directorul curent. Mai intai vor fi afisate
+numele directoarelor, apoi a fisierelor, fiecare pe un rand nou.
+</p>
+
+<p>
+</p><p></p><div class="noteclassic"> Deoarece primele doua functii nu pot fi testate fara ls, acestea vor fi testate impreuna. 
+</div><p></p>
+<p></p>
+
+</div>
+
+<h3 class="sectionedit7" id="rm_-_5p">4. rm - 5p</h3>
+<div class="level3">
+<pre class="code c"><span class="kw4">void</span> rm <span class="br0">(</span>Dir<span class="sy0">*</span> parent<span class="sy0">,</span> <span class="kw4">char</span><span class="sy0">*</span> name<span class="br0">)</span><span class="sy0">;</span></pre>
+
+<p>
+Functia elimina fisierul cu numele name din directorul curent. Daca nu a fost gasit niciun fisier cu numele dat,
+se va afisa mesajul de eroare <code>Could not find the file\n</code>. Numele fisierului nu contine ”/”(nu va reprezenta o cale).
+</p>
+
+<p>
+Exemplu de rulare:
+</p>
+<pre class="code">touch f1
+touch f2
+ls
+rm f1
+ls
+stop</pre>
+
+<p>
+Rezultat:
+</p>
+<pre class="code">f1
+f2
+f2</pre>
+
+</div>
+
+<h3 class="sectionedit8" id="rmdir_-_10p">5. rmdir - 10p</h3>
+<div class="level3">
+<pre class="code c"><span class="kw4">void</span> rmdir <span class="br0">(</span>Dir<span class="sy0">*</span> parent<span class="sy0">,</span> <span class="kw4">char</span><span class="sy0">*</span> name<span class="br0">)</span><span class="sy0">;</span></pre>
+
+<p>
+Functia elimina directorul cu numele <code>name</code> din directorul 
+curent si toate fisierele care se gasesc in acesta. Daca nu a fost gasit
+ niciun director cu numele dat, se va afisa mesajul de eroare <code>Could not find the dir\n</code>. Numele directorului nu contine ”/”(nu va reprezenta o cale).
+</p>
+
+<p>
+Exemplu de rulare:
+</p>
+<pre class="code">mkdir d1
+mkdir d2
+ls
+rmdir d2
+ls
+stop</pre>
+
+<p>
+Rezultat:
+</p>
+<pre class="code">d1
+d2
+d1</pre>
+
+<p>
+</p><p></p><div class="noteclassic">Comportamentul functiei <code>rmdir</code> difera de comportamentul utilitarului <code>rmdir</code>. Functionalitatea acestei functii este echivalenta cu folosirea comenzii <code>rm -r &lt;director&gt;</code>
+</div><p></p>
+<p></p>
+
+</div>
+
+<h3 class="sectionedit9" id="cd_-_5p">6. cd - 5p</h3>
+<div class="level3">
+<pre class="code c"><span class="kw4">void</span> cd<span class="br0">(</span>Dir<span class="sy0">**</span> target<span class="sy0">,</span> <span class="kw4">char</span><span class="sy0">*</span> name<span class="br0">)</span><span class="sy0">;</span></pre>
+
+<p>
+Functia schimba directorul curent in directorul cu numele name, din 
+lista de directoare a directorului curent. Daca nu este gasit,
+se va afisa mesajul de eroare <code>No directories found!\n</code>. 
+Pentru a schimba directorul curent in directorul parinte al celui curent
+se va folosi sirul de caractere special ”..”. Daca directorul curent nu 
+are parinte, ,atunci nu se va schimba directorul curent. Numele
+directorului nu contine ”/”(nu va reprezenta o cale).
+</p>
+
+</div>
+
+<h3 class="sectionedit10" id="tree_-_10p">7. tree  - 10p</h3>
+<div class="level3">
+<pre class="code c"><span class="kw4">void</span> tree<span class="br0">(</span>Dir<span class="sy0">*</span> target<span class="sy0">,</span> <span class="kw4">int</span> level<span class="br0">)</span><span class="sy0">;</span></pre>
+
+<p>
+Functia tree afiseaza interiorul directorului curent intr-o forma arborescenta si al fiecarului director din interior.
+</p>
+
+<p>
+Formatul de output este urmatorul: 4 spatii(”    ”) x level + nume 
+file/director. Antetul functiei estescris pentru a permite o rezolvare 
+recursiva, insa cerinta poate fi rezolvata iterativ.
+</p>
+
+<p>
+Ordinea de afisare este urmtoarea:
+</p>
+<ul>
+<li class="level1"><div class="li"> Se vor afisa mai intai numele directoarele si apoi numele fisierele</div>
+</li>
+<li class="level1"><div class="li"> Numele directoarelor si al fisierelor vor fi afisate in ordinea in care au fost create</div>
+</li>
+<li class="level1"><div class="li"> Dupa afisarea numelui unui director, se va afisa tot ceea ce contine acel director</div>
+</li>
+</ul>
+
+<p>
+Exemplu de rulare:
+</p>
+<pre class="code">mkdir d1
+mkdir d2
+cd d1
+touch f1
+mkdir d3
+cd d3
+touch f2
+mkdir d4
+cd ..
+cd ..
+tree
+stop</pre>
+
+<p>
+Rezultat:
+</p>
+<pre class="code c">d1
+    d3
+        d4
+        f2
+    f1
+d2</pre>
+
+</div>
+
+<h3 class="sectionedit11" id="pwd_-_10p">8. pwd  - 10p</h3>
+<div class="level3">
+<pre class="code c"><span class="kw4">char</span> <span class="sy0">*</span>pwd <span class="br0">(</span>Dir<span class="sy0">*</span> target<span class="br0">)</span><span class="sy0">;</span></pre>
+
+<p>
+Functia intoarce un sir de caractere ce reprezinta calea de la 
+directorul radacina(home) pana la directorul curent, cu numele target. 
+Formatul aplicat pentru afisare este: 
+”/home/(parent_name)/…./(target-name)”. Rezultatul functiei trebuie 
+afisat la stdout, in afara functiei pwd.
+</p>
+
+<p>
+Exemplu de rulare:
+</p>
+<pre class="code">mkdir d1
+cd d1
+pwd
+stop</pre>
+
+<p>
+Rezultat:
+</p>
+<pre class="code">/home/d1</pre>
+
+</div>
+
+<h3 class="sectionedit12" id="stop">9. stop</h3>
+<div class="level3">
+<pre class="code c"><span class="kw4">void</span> stop <span class="br0">(</span>Dir<span class="sy0">*</span> target<span class="br0">)</span><span class="sy0">;</span></pre>
+
+<p>
+Aceasta functie opreste aplicatia.
+</p>
+
+</div>
+
+<h3 class="sectionedit13" id="memory_management_-_20p">10. memory management  - 20p</h3>
+<div class="level3">
+
+<p>
+O alta parte foarte importanta a temei este intelegerea si lucrul cu memoria. Pentru asta, acest task va consta din doua parti:
+</p>
+
+<p>
+1) Alocarea corecta de memorie: memoria va fi alocata dinamic pentru 
+troate string-urile si structurile folosite. Pentru un fisier cu numele 
+“Ana”, se vor aloca dinamic 4 octeti (3 pentru fiecare litera + unul 
+pentru terminatorul de sir). Declaratiile statice de tipul <code>char a[50]</code> trebuie modificate in <code>char *a = malloc(size_of_string);</code>.
+</p>
+
+<p>
+2) Dezalocarea corecta a memoriei: memoria va fi dezalocata corect si 
+complet. Astfel, in functie de task, vor trebui sa se faca urmatoarele
+operatii:
+</p>
+<ul>
+<li class="level1"><div class="li"> rm: se va dezaloca structura in sine</div>
+</li>
+<li class="level1"><div class="li"> rmdir: se va dezaloca atat structura
+ in sine, cat si fiecare structura din interiorul directorului (atat 
+directoarele cat si fisierele)</div>
+</li>
+<li class="level1"><div class="li"> pwd: se va dezaloca sirul intors de acesta, in afara functiei pwd (dupa ce a fost afisat)</div>
+</li>
+<li class="level1"><div class="li"> stop: la inchiderea aplicatiei, memoria alocata pentru directoarele si fisierele va fi eliberata</div>
+</li>
+</ul>
+
+<p>
+Pentru testare, vom folosi valgrind si ca punct de referinta, programul 
+nu trebuie sa afiseze niciun read invalid sau orice leak de memorie.
+</p>
+
+<p>
+<code>valgrind –leak-check=full –show-leak-kinds=all –track-origins=yes ./tema</code>.
+</p>
+
+<p>
+</p><p></p><div class="noteclassic">Punctajul pe aceasta cerinta va fi oferit doar daca cel putin 50p au fost obtinute din alte cerinte.
+</div><p></p>
+<p></p>
+
+</div>
+
+<h3 class="sectionedit14" id="bonus_mv_-_20p">11. (Bonus) mv - 20p</h3>
+<div class="level3">
+<pre class="code c"><span class="kw4">void</span> mv<span class="br0">(</span>Dir<span class="sy0">*</span> parent<span class="sy0">,</span> <span class="kw4">char</span><span class="sy0">*</span> oldname<span class="sy0">,</span> <span class="kw4">char</span><span class="sy0">*</span> newname<span class="br0">)</span><span class="sy0">;</span></pre>
+
+<p>
+Functia va schimba numele directorului/fisierului oldname din directorul
+ curent in newname. Se va verifica, mai intai, daca numele oldname
+exista deja, in caz contrar se va afisa mesajul <code>File/Director not found\n</code>, iar apoi daca numele newname nu este folosit deja, in caz
+contrar se va afisa mesajul de eroare <code>File/Director already exists\n</code>.
+ Schimbarea se va face prin readaugare directorului/fisierului in
+lista de directoare/fisiere. In cazul directoarelor, interiorul va 
+ramane neschimbat. Numele directorului/fisierului(atat cel vechi, cat si
+ cel nou) nu contine ”/”(nu va reprezenta o cale).
+</p>
+
+<p>
+Exemplu de rulare 1:
+</p>
+<pre class="code">mkdir d1
+ls
+mv d2 d3
+ls
+stop</pre>
+
+<p>
+Rezultat 1:
+</p>
+<pre class="code">d1
+File/Director not found
+d1</pre>
+
+<p>
+Exemplu de rulare 2:
+</p>
+<pre class="code">touch f1
+touch f2
+ls
+mv f1 f3
+ls
+stop</pre>
+
+<p>
+Rezultat 2:
+</p>
+<pre class="code">f1
+f2
+f2
+f3</pre>
+
+</div>
+
+<h2 class="sectionedit15" id="trimitere_si_notare">Trimitere și notare</h2>
+<div class="level2">
+
+<p>
+Temele vor trebui încărcate pe platforma <a href="https://vmchecker.cs.pub.ro/ui/#IOCLA" class="urlextern" title="https://vmchecker.cs.pub.ro/ui/#IOCLA" rel="nofollow">vmchecker</a> (în secțiunea IOCLA) și vor fi testate automat. Arhiva încărcată trebuie să fie o arhivă <code>.zip</code> care să conțină:
+</p>
+<ul>
+<li class="level1"><div class="li"> fișierul sursă ce conține implementarea temei, denumit <code>tema1.c</code></div>
+</li>
+<li class="level1"><div class="li"> fișier <code>README</code> ce conține descrierea implementării</div>
+</li>
+</ul>
+
+<p>
+Punctajul final acordat pe o temă este compus din:
+</p>
+<ul>
+<li class="level1"><div class="li"> punctajul obținut prin testarea automată de pe vmchecker - 90%</div>
+</li>
+<li class="level1"><div class="li"> fișier README - 10%</div>
+</li>
+<li class="level1"><div class="li"> bonus - 20%</div>
+</li>
+</ul>
+
+</div>
+
+<h2 class="sectionedit16" id="precizari_suplimentare">Precizări suplimentare</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Checkerul se va rula folosind comanda <code>make checker</code> după ce ați dat drepturi de execuție fișierului.</div>
+</li>
+<li class="level1"><div class="li"> Fisierul sursa se va numi tema1.c.</div>
+</li>
+<li class="level1"><div class="li"> Arhiva va trebui incarcata pe 
+vmchecker. Pe langa codul sursa, va trebui sa fie adaugat si un fisier 
+README. Acesta va reprezenta 10p din nota finala. </div>
+</li>
+<li class="level1"><div class="li"> Dimensiunea maxima a unei linii citite este definita in scheletul de cod cu numele <code>MAX_INPUT_LINE_SIZE</code></div>
+</li>
+<li class="level1"><div class="li"> Recomandam parcurgerea <a href="https://ocw.cs.pub.ro/courses/iocla/reguli-notare#realizarea_temelor" class="urlextern" title="https://ocw.cs.pub.ro/courses/iocla/reguli-notare#realizarea_temelor" rel="nofollow">regulamentului</a> daca nu ati facut-o deja</div>
+</li>
+<li class="level1"><div class="li"> EDIT 2.11.2021: Puteti folosi orice 
+coding style, cat timp sunteti consecventi. Vom depuncta situatii in 
+care coding style-ul ingreuneaza citirea codului.</div>
+</li>
+</ul>
+
+</div>
+
+<h2 class="sectionedit17" id="resurse">Resurse</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Scheletul de cod, Makefile-ul si scriptul de testare se gasesc pe repository-ul public <a href="https://github.com/systems-cs-pub-ro/iocla" class="urlextern" title="https://github.com/systems-cs-pub-ro/iocla" rel="nofollow">IOCLA</a> in folderul <code>teme/tema-1/</code>.</div>
+</li>
+</ul>
+
+</div>
+
+        </div>
+        <div class="right_sidebar">
+          <form action="/courses/start" accept-charset="utf-8" class="search" id="dw__search" method="get"><div class="no"><input type="hidden" name="do" value="search"><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]"><input type="submit" value="Search" class="button" title="Search"><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>          <div class="namespace_sidebar sidebar_box">
+
+
+
+<div><div id="nojs_indexmenu_176052654361b54f49ebaf2" data-jsajax="%26skipfile%3D%252B/iocla%253A%2528sidebar%257Cindex%257Cdraft-reguli-si-notare%257CCatalog%2529/" class="indexmenu_nojs">
+
+<ul class="idx">
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/anunturi" class="wikilink1" title="iocla:anunturi">Anunțuri</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/bune-practici" class="wikilink1" title="iocla:bune-practici">Bune practici</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/calendar" class="wikilink1" title="iocla:calendar">Calendar</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/catalog" class="wikilink1" title="iocla:catalog">Catalog</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/feed" class="wikilink1" title="iocla:feed">Feed RSS</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/need-to-know" class="wikilink1" title="iocla:need-to-know">IOCLA Need to Know</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/reguli-notare" class="wikilink1" title="iocla:reguli-notare">Reguli și notare</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/utile" class="wikilink1" title="iocla:utile">Resurse utile</a></div></li>
+</ul>
+</div></div>
+
+<h1 class="sectionedit1" id="cursuri">Cursuri</h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/cursuri/capitol-00" class="wikilink1" title="iocla:cursuri:capitol-00">Capitol 00: Prezentare</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/cursuri/capitol-01" class="wikilink1" title="iocla:cursuri:capitol-01">Capitol 01: Programe și sistemul de calcul</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/cursuri/capitol-02" class="wikilink1" title="iocla:cursuri:capitol-02">Capitol 02: Construirea programelor</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/cursuri/capitol-03" class="wikilink1" title="iocla:cursuri:capitol-03">Capitol 03: Arhitectura sistemului de calcul</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/cursuri/capitol-04" class="wikilink1" title="iocla:cursuri:capitol-04">Capitol 04: Reprezentarea numerelor</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/cursuri/capitol-05" class="wikilink1" title="iocla:cursuri:capitol-05">Capitol 05: Interfața hardware - software x86</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/cursuri/capitol-06" class="wikilink1" title="iocla:cursuri:capitol-06">Capitol 06: Stiva</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/cursuri/capitol-07" class="wikilink1" title="iocla:cursuri:capitol-07">Capitol 07: Funcții</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/cursuri/capitol-08" class="wikilink1" title="iocla:cursuri:capitol-08">Capitol 08: Interfața binară a funcțiilor</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/cursuri/capitol-09" class="wikilink1" title="iocla:cursuri:capitol-09">Capitol 09: Gestiunea bufferelor</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/cursuri/capitol-10" class="wikilink1" title="iocla:cursuri:capitol-10">Capitol 10: Curs ales de titular</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/cursuri/capitol-11" class="wikilink1" title="iocla:cursuri:capitol-11">Capitol 11: Curs ales de studenți</a></div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT1 SECTION "Cursuri" [197-1100] -->
+<h1 class="sectionedit2" id="laboratoare">Laboratoare</h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/laboratoare/laborator-01" class="wikilink1" title="iocla:laboratoare:laborator-01">Laborator 01: Reprezentarea numerelor, operații pe biți și lucru cu memoria</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/laboratoare/laborator-02" class="wikilink1" title="iocla:laboratoare:laborator-02">Laborator 02: Operații cu memoria. Introducere în GDB</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/laboratoare/laborator-03" class="wikilink1" title="iocla:laboratoare:laborator-03">Laborator 03: Toolchain</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/laboratoare/laborator-04" class="wikilink1" title="iocla:laboratoare:laborator-04">Laborator 04: Crearea și analiza unui executabil</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/laboratoare/laborator-05" class="wikilink1" title="iocla:laboratoare:laborator-05">Laborator 05: Introducere în limbajul de asamblare</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/laboratoare/laborator-06" class="wikilink1" title="iocla:laboratoare:laborator-06">Laborator 06: Rolul registrelor, adresare directă și bazată</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/laboratoare/laborator-07" class="wikilink1" title="iocla:laboratoare:laborator-07">Laborator 07: Date Structurate. Structuri, vectori. Operatii pe siruri</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/laboratoare/laborator-08" class="wikilink1" title="iocla:laboratoare:laborator-08">Laborator 08: Lucrul cu stiva</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/laboratoare/laborator-09" class="wikilink1" title="iocla:laboratoare:laborator-09">Laborator 09: Apeluri de funcții</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/laboratoare/laborator-10" class="wikilink1" title="iocla:laboratoare:laborator-10">Laborator 10: Interactiunea C-assembly</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/laboratoare/laborator-11" class="wikilink1" title="iocla:laboratoare:laborator-11">Laborator 11: Gestiunea bufferelor. Buffer overflow</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/laboratoare/laborator-12" class="wikilink1" title="iocla:laboratoare:laborator-12">Laborator 12: CTF</a></div>
+</li>
+</ul>
+
+<div><div id="nojs_indexmenu_30131468061b54f49f088f" data-jsajax="" class="indexmenu_nojs">
+
+<ul class="idx">
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/iocla/laboratoare/extra/laborator-arm" class="wikilink1" title="iocla:laboratoare:extra:laborator-arm">Laborator facultativ: ARM assembly</a></div></li>
+</ul>
+</div></div>
+
+</div>
+<!-- EDIT2 SECTION "Laboratoare" [1101-1658] -->
+<h1 class="sectionedit3" id="teme">Teme</h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> <span class="curid"><a href="https://ocw.cs.pub.ro/courses/iocla/teme/tema-1" class="wikilink1" title="iocla:teme:tema-1">Tema 1  - Sistemul lui Biju</a></span></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/iocla/teme/tema-2" class="wikilink1" title="iocla:teme:tema-2"> Tema 2 - Memoria lui Biju</a></div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT3 SECTION "Teme" [1659-] -->
+</div>
+<div class="toc_sidebar sidebar_box">
+<!-- TOC START -->
+<div id="sb__right__dw__toc">
+<h3 class="toggle">Table of Contents</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="#tema_1_-_sistemul_lui_biju">Tema 1  - Sistemul lui Biju</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="#enunt">Enunt</a></div></li>
+<li class="level2"><div class="li"><a href="#implementare">Implementare</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#touch">1. touch</a></div></li>
+<li class="level3"><div class="li"><a href="#mkdir">2. mkdir</a></div></li>
+<li class="level3"><div class="li"><a href="#ls_-_30p">3. ls - 30p</a></div></li>
+<li class="level3"><div class="li"><a href="#rm_-_5p">4. rm - 5p</a></div></li>
+<li class="level3"><div class="li"><a href="#rmdir_-_10p">5. rmdir - 10p</a></div></li>
+<li class="level3"><div class="li"><a href="#cd_-_5p">6. cd - 5p</a></div></li>
+<li class="level3"><div class="li"><a href="#tree_-_10p">7. tree  - 10p</a></div></li>
+<li class="level3"><div class="li"><a href="#pwd_-_10p">8. pwd  - 10p</a></div></li>
+<li class="level3"><div class="li"><a href="#stop">9. stop</a></div></li>
+<li class="level3"><div class="li"><a href="#memory_management_-_20p">10. memory management  - 20p</a></div></li>
+<li class="level3"><div class="li"><a href="#bonus_mv_-_20p">11. (Bonus) mv - 20p</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#trimitere_si_notare">Trimitere și notare</a></div></li>
+<li class="level2"><div class="li"><a href="#precizari_suplimentare">Precizări suplimentare</a></div></li>
+<li class="level2"><div class="li"><a href="#resurse">Resurse</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+</div>
+        </div>
+      
+    
+      <div class="stylefoot">
+        <div class="meta">
+          <div class="user">
+                    </div>
+          <div class="doc">
+          iocla/teme/tema-1.txt · Last modified: 2021/11/02 18:25 by radu.nicolau          </div>
+        </div>
+      </div>
+
+    <div class="clearer"></div>
+
+    
+                <div class="bar" id="bar__bottom">
+      <div class="bar-left">
+        <a href="https://ocw.cs.pub.ro/courses/iocla/teme/tema-1?do=revisions" class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]">Old revisions</a>      </div>
+      <div class="bar-right">
+        <a href="https://ocw.cs.pub.ro/courses/iocla/teme/tema-1?do=media&amp;ns=iocla%3Ateme" class="action media" rel="nofollow" title="Media Manager">Media Manager</a><a href="#dokuwiki__top" class="action top" accesskey="t" rel="nofollow" title="Back to top [T]">Back to top</a>      </div>
+    </div>
+    <div class="clearer"></div>
+            
+    <div class="footerinc" align="center">
+  <div class="license"><a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="enunt_files/cc-by-sa.png" alt="CC Attribution-Share Alike 3.0 Unported"></a></div>
+  <a target="_blank" href="http://www.chimeric.de/" title="www.chimeric.de"><img src="enunt_files/button-chimeric-de.png" alt="www.chimeric.de" width="80" height="15" border="0"></a>
+
+  <a target="_blank" href="http://jigsaw.w3.org/css-validator/check/referer" title="Valid CSS"><img src="enunt_files/button-css.png" alt="Valid CSS" width="80" height="15" border="0"></a>
+
+  <a target="_blank" href="http://wiki.splitbrain.org/wiki:dokuwiki" title="Driven by DokuWiki"><img src="enunt_files/button-dw.png" alt="Driven by DokuWiki" width="80" height="15" border="0"></a>
+
+  <a target="_blank" href="http://www.firefox-browser.de/" title="do yourself a favour and use a real browser - get firefox"><img src="enunt_files/button-firefox.png" alt="do yourself a favour and use a real browser - get firefox!!" width="80" height="15" border="0"></a>
+  
+  <a target="_blank" href="https://ocw.cs.pub.ro/courses/feed.php" title="Recent changes RSS feed"><img src="enunt_files/button-rss.png" alt="Recent changes RSS feed" width="80" height="15" border="0"></a>
+
+  <a target="_blank" href="http://validator.w3.org/check/referer" title="Valid XHTML 1.0"><img src="enunt_files/button-xhtml.png" alt="Valid XHTML 1.0" width="80" height="15" border="0"></a>
+</div>
+
+  </div>
+</div>
+
+<div class="no"><img src="enunt_files/indexer.gif" alt="" width="2" height="1"></div>
+
+
+</body></html>
