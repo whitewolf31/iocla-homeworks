@@ -22,10 +22,8 @@ Node* sort(int n, Node *nodes) {
     }
     if (node_to_change != NULL) {
       node_to_change->next = current_min_node;
-      node_to_change = current_min_node;
-    } else {
-      node_to_change = current_min_node;
     }
+    node_to_change = current_min_node;
   }
 
   return nodes;

@@ -1,6 +1,6 @@
-CC=arch -x86_64 gcc
+CC=gcc
 CFLAGS=-m32 -g -fno-pie -no-pie
-ASM=arch -x86_64 nasm
+ASM=nasm
 ASMFLAGS=-f elf32
 MAKEFLAGS += --silent
 
@@ -16,4 +16,4 @@ check:
 	./check.sh
 
 clean:
-	rm *.o task1
+	rm *.o checker
