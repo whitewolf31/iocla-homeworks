@@ -1,5 +1,5 @@
 ASM=nasm
-ASMFLAGS=-f elf64
+ASMFLAGS=-f elf64 -g
 MAKEFLAGS=--silent
 
 build: checker

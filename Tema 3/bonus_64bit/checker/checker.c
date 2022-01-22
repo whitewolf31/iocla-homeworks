@@ -34,6 +34,7 @@ int main(void)
 
 	v = malloc(n * sizeof(*v));
 
+label:
 	intertwine(v1, n1, v2, n2, v);
 	
 	for (i = 0; i < n; i++)

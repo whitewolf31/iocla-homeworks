@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS=-m32
+CFLAGS=-m32 -fno-pie -no-pie
 ASM=nasm
 ASMFLAGS=-f elf32
 

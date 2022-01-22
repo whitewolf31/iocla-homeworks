@@ -1,7 +1,7 @@
 CC = gcc
-CFLAGS = -m32
+CFLAGS = -m32 -g
 ASM = nasm
-ASMFLAGS = -f elf
+ASMFLAGS = -g -f elf32
 
 build: checker
 
